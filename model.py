@@ -15,7 +15,7 @@ model, preprocess = clip.load("ViT-B/32", device=device)
 
 # --- Functions ---
 
-def load_captions(filepath=r"C:\Users\ADITI\projects\Image_caption\captions.csv"):
+def load_captions(filepath="captions.csv"):
     df = pd.read_csv(filepath)
 
     # Strip whitespace from column names to avoid KeyError
@@ -49,7 +49,7 @@ def recommend_captions(image_path, captions, top_k=5):
 # --- Optional: Demo/Test Block ---
 if __name__ == "__main__":
     image_path = "sample.jpg"  # Change this for standalone testing
-    caption_file = r"C:\Users\ADITI\projects\Image_caption\captions.csv"
+    caption_file = "captions.csv"
 
     captions = load_captions(caption_file)
     top_captions = recommend_captions(image_path, captions, top_k=5)
