@@ -76,7 +76,7 @@ if uploaded_file:
     with col2:
         with st.spinner("✨ Finding the best captions for your vibe..."):
             try:
-                captions = load_captions(r"C:\Users\ADITI\projects\Image_caption\captions.csv")
+                captions = load_captions("captions.csv")
                 if not captions:
                     st.error("⚠️ No captions found.")
                     st.stop()
